@@ -1,4 +1,4 @@
-<img width="1347" height="872" alt="1" src="https://github.com/user-attachments/assets/3d40e6c3-59ad-4e1a-9cfd-c68eb2934887" />
+
 # SQL injection attack, listing the database contents on non-Oracle databases
 
 This lab contains a SQL injection vulnerability in the product category filter. The results from the query are returned in the application's response so you can use a UNION attack to retrieve data from other tables.
