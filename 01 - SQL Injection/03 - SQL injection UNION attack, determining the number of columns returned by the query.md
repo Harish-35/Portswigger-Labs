@@ -17,7 +17,7 @@ We see there are 2 values displayed in the table, the name and the price of the 
 <img width="1013" height="831" alt="1" src="https://github.com/user-attachments/assets/94cd6276-d12c-4ffb-a553-99176562c594" />
 
 
-The following payload is accepted and we see the 4 items from Accessories category:
+The following payload is accepted and we see the 4 items from Gifts category:
 
 ```
 /filter?category=Tech+gifts'--
