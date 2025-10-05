@@ -34,3 +34,4 @@ Filtering using GET parameter “category”: "/filter?category=Accesories"
 
 <img width="1534" height="832" alt="2" src="https://github.com/user-attachments/assets/706a6b72-4a5a-4647-924c-2db77e8dfc17" />
 
+
